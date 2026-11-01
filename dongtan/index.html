@@ -192,10 +192,10 @@ footer b{color:var(--ink);font-weight:600}
 
   <footer>
     <div><b>데이터</b> 국토교통부 아파트 매매·전월세 실거래가(공공데이터포털). 동탄1신도시는 반송·능·석우동, 나머지 동탄구는 동탄2신도시로 묶었습니다. 영통권은 수원 영통동·망포동과 용인 서천동이고, 광교신도시(이의·하동)는 뺐습니다. 용인 기흥은 서천동을 뺀 기흥구, 용인 수지는 수지구에서 광교신도시 단지(이름에 ‘광교’가 들어간 상현동 단지)를 뺀 나머지입니다. 화성 분구(2026년 2월) 이전 동탄 거래는 화성시 코드에서 골라 합쳤습니다.</div>
-    <div><b>계산 기준</b> 평당가는 같은 권역(동탄1·동탄2·영통권·기흥·수지) 중위값과 비교합니다. 매매가와 전세가는 위에서 고른 기간(최근 3개월 또는 6개월)의 중위값입니다. 해제된 거래와 1~3층 거래는 현재가에서 빼고, 전세가는 월세 없는 순수 전세만 씁니다. 전고점은 데이터 마지막 달 기준 1년 전까지의 역대 최고 실거래가(84㎡, 해제 거래 제외, 층 구분 없음)입니다. 최근 1년 거래는 ‘현재’로 보고 전고점에서 뺍니다. 위에서 고른 기간(3개월·6개월)의 중위 매매가가 전고점보다 높으면 ‘전고점 돌파’, 낮으면 ‘전고점 대비 -%’로 표시합니다. 1년 이상 된 거래가 없는 신축 단지는 ‘전고점 없음’으로 두고 이 항목을 중간 점수로 처리합니다.</div>
+    <div><b>계산 기준</b> 평당가는 같은 권역(동탄1·동탄2·영통권·기흥·수지) 중위값과 비교합니다. 매매가와 전세가는 위에서 고른 기간(최근 3개월 또는 6개월)의 중위값입니다. 해제된 거래와 1~3층 거래는 현재가에서 빼고, 전세가는 월세 없는 순수 전세만 씁니다. 전고점은 데이터 마지막 달 기준 1년 전까지의 역대 최고 실거래가(84㎡, 해제 거래 제외, 층 구분 없음)입니다. 최근 1년 거래는 ‘현재’로 보고 전고점에서 뺍니다. 위에서 고른 기간(3개월·6개월)의 중위 매매가가 전고점보다 높으면 ‘전고점 돌파’, 낮으면 ‘전고점 대비 -%’로 표시합니다. 준공 5년 이내 신축(데이터 마지막 해 기준)과 1년 이상 된 거래가 없는 단지는 분양권·입주 초기 거래가 전고점이 되기 쉬워 전고점 비교에서 빼고, 이 항목을 중간 점수로 처리합니다. 전고점 돌파 비율과 ‘전고점 미회복/돌파’ 필터도 신축을 빼고 계산합니다.</div>
     <div><b>임대 출신 표시</b> 공공임대·민간임대로 공급된 뒤 분양전환된 단지는 ‘임대 출신’, 준공 4년 이상 지나서야 84㎡ 첫 매매가 나온 단지는 ‘임대 추정’으로 표시합니다. 추정은 데이터로 짐작한 것이라 틀릴 수 있습니다.</div>
     <div><b>한계</b> 실거래 신고는 계약 후 30일까지 들어오므로 최근 한두 달은 건수가 적습니다. 점수는 공식 지표가 아니라 화면 위 가중치로 만든 참고값이니, 투자 판단은 현장 확인과 함께 하세요.</div>
-    <div class="verline"><span class="ver">v0.5</span><span>coded by SM Jeong</span></div><details class="history" id="history"><summary>업데이트 기록</summary><ol class="hist"><li><div class="hv"><b>v0.5</b><span>2026-11-01</span></div><ul><li>전고점 = 1년 전까지의 역대 최고 실거래가(단일 거래, 층 구분 없음)로 변경 — 3개월 묶음 중위값 방식 폐지</li><li>3·6개월 중위 매매가를 전고점과 비교해 목록에 ‘전고점 돌파 +%’(빨강) / ‘전고점 대비 -%’(초록) 표시</li><li>필터 ‘전고점 미회복’, ‘전고점 돌파’ 추가, 요약에 전고점 돌파 단지 수와 비율 표시</li><li>단지 상세에 전고점 거래일·층, 차트에 전고점 위치 표시</li></ul></li><li><div class="hv"><b>v0.4</b><span>2026-11-01</span></div><ul><li>전고점 기준 변경: 데이터 마지막 달 기준 1년 전까지의 역대 최고가 (최근 1년 시세는 전고점에서 제외)</li><li>지금 시세가 전고점보다 높으면 ‘전고점 돌파’로 표시, 1년 이상 된 거래가 없는 신축은 이 항목을 중간 점수로 처리</li><li>시세 차트에 전고점 시점과 전고점 기준 기간 경계선 표시</li></ul></li><li><div class="hv"><b>v0.3.1</b><span>2026-11-01</span></div><ul><li>역 위치를 카카오 지하철역 정보로 교체: ‘역 1km 이내’ 필터와 단지별 가까운 역·거리 표시 (39개 역)</li></ul></li><li><div class="hv"><b>v0.3</b><span>2026-11-01</span></div><ul><li>카카오 지도를 처음에 못 불러오면 한 번 더 불러오고, 그래도 안 되면 원인(브라우저 차단 등)과 해결 방법 안내</li><li>지도 영역 최소 높이 지정 (화면이 작은 폰에서도 지도가 보이도록)</li><li>앞으로 카카오맵 버전만 갱신 (Claude 안의 스크리너는 v0.2에서 고정)</li></ul></li><li><div class="hv"><b>v0.2</b><span>2026-10-31</span></div><ul><li>임대 출신 단지 표시: 공공임대·민간임대로 공급 후 분양전환된 단지에 ‘임대 출신’, 데이터로 추정되는 단지에 ‘임대 추정’ 배지</li><li>‘임대 출신 제외’ 필터 추가, 지도에서는 점선 테두리로 구분</li><li>단지 상세에 임대 출신 사유와 시세 해석 주의 문구 표시</li></ul></li><li><div class="hv"><b>v0.1</b><span>2026-10-31</span></div><ul><li>국토교통부 실거래가(매매·전월세) 기반 전용 84㎡ 저평가 스크리너 첫 버전</li><li>권역: 동탄1신도시, 동탄2신도시, 영통권(영통·망포·서천), 용인 기흥, 용인 수지 (광교신도시 제외)</li><li>저평가 점수: 전고점 대비 하락폭, 권역 평균 대비 평당가, 전세가율, 신축도 가중합 (가중치 조절 가능)</li><li>매매가·전세가 기준 기간 선택: 최근 3개월 / 6개월 중위값</li><li>필터: 역 1km 이내, 전세가율 50%+, 10억 미만, 2018년 이후 준공, 최근 거래 건수</li><li>단지 지도(오픈스트리트맵 배경), 카카오맵 버전 별도 페이지, 단지별 카카오맵·네이버지도 바로가기</li><li>단지 상세: 월별 거래가 추이, 최근 실거래 10건, 점수 구성</li></ul></li></ol></details>
+    <div class="verline"><span class="ver">v0.6</span><span>coded by SM Jeong</span></div><details class="history" id="history"><summary>업데이트 기록</summary><ol class="hist"><li><div class="hv"><b>v0.6</b><span>2026-11-01</span></div><ul><li>전고점 비교에서 준공 5년 이내 신축 제외 (분양권·입주 초기 거래가 전고점이 되는 왜곡 방지) — 점수·돌파 비율·필터 모두 적용</li><li>목록에 ‘신축 · 전고점 비교 제외’ 표시, 요약 카드를 ‘전고점 돌파 (신축 제외)’로 변경</li></ul></li><li><div class="hv"><b>v0.5</b><span>2026-11-01</span></div><ul><li>전고점 = 1년 전까지의 역대 최고 실거래가(단일 거래, 층 구분 없음)로 변경 — 3개월 묶음 중위값 방식 폐지</li><li>3·6개월 중위 매매가를 전고점과 비교해 목록에 ‘전고점 돌파 +%’(빨강) / ‘전고점 대비 -%’(초록) 표시</li><li>필터 ‘전고점 미회복’, ‘전고점 돌파’ 추가, 요약에 전고점 돌파 단지 수와 비율 표시</li><li>단지 상세에 전고점 거래일·층, 차트에 전고점 위치 표시</li></ul></li><li><div class="hv"><b>v0.4</b><span>2026-11-01</span></div><ul><li>전고점 기준 변경: 데이터 마지막 달 기준 1년 전까지의 역대 최고가 (최근 1년 시세는 전고점에서 제외)</li><li>지금 시세가 전고점보다 높으면 ‘전고점 돌파’로 표시, 1년 이상 된 거래가 없는 신축은 이 항목을 중간 점수로 처리</li><li>시세 차트에 전고점 시점과 전고점 기준 기간 경계선 표시</li></ul></li><li><div class="hv"><b>v0.3.1</b><span>2026-11-01</span></div><ul><li>역 위치를 카카오 지하철역 정보로 교체: ‘역 1km 이내’ 필터와 단지별 가까운 역·거리 표시 (39개 역)</li></ul></li><li><div class="hv"><b>v0.3</b><span>2026-11-01</span></div><ul><li>카카오 지도를 처음에 못 불러오면 한 번 더 불러오고, 그래도 안 되면 원인(브라우저 차단 등)과 해결 방법 안내</li><li>지도 영역 최소 높이 지정 (화면이 작은 폰에서도 지도가 보이도록)</li><li>앞으로 카카오맵 버전만 갱신 (Claude 안의 스크리너는 v0.2에서 고정)</li></ul></li><li><div class="hv"><b>v0.2</b><span>2026-10-31</span></div><ul><li>임대 출신 단지 표시: 공공임대·민간임대로 공급 후 분양전환된 단지에 ‘임대 출신’, 데이터로 추정되는 단지에 ‘임대 추정’ 배지</li><li>‘임대 출신 제외’ 필터 추가, 지도에서는 점선 테두리로 구분</li><li>단지 상세에 임대 출신 사유와 시세 해석 주의 문구 표시</li></ul></li><li><div class="hv"><b>v0.1</b><span>2026-10-31</span></div><ul><li>국토교통부 실거래가(매매·전월세) 기반 전용 84㎡ 저평가 스크리너 첫 버전</li><li>권역: 동탄1신도시, 동탄2신도시, 영통권(영통·망포·서천), 용인 기흥, 용인 수지 (광교신도시 제외)</li><li>저평가 점수: 전고점 대비 하락폭, 권역 평균 대비 평당가, 전세가율, 신축도 가중합 (가중치 조절 가능)</li><li>매매가·전세가 기준 기간 선택: 최근 3개월 / 6개월 중위값</li><li>필터: 역 1km 이내, 전세가율 50%+, 10억 미만, 2018년 이후 준공, 최근 거래 건수</li><li>단지 지도(오픈스트리트맵 배경), 카카오맵 버전 별도 페이지, 단지별 카카오맵·네이버지도 바로가기</li><li>단지 상세: 월별 거래가 추이, 최근 실거래 10건, 점수 구성</li></ul></li></ol></details>
   </footer>
 </div>
 
@@ -214,6 +214,8 @@ const clamp=v=>Math.max(0,Math.min(1,v));
 const ymLabel=ym=>`${ym.slice(0,4)}.${ym.slice(4)}`;
 
 // 전고점 기준: 데이터 마지막 달에서 1년 전까지의 거래만 봄 (최근 1년 시세는 '현재'로 취급)
+// 신축: 준공 5년 이내 (데이터 마지막 해 기준). 분양권·입주 초기 거래가 전고점이 되기 쉬워 전고점 비교에서 제외
+const NEW_BUILT_FROM=+RAW.through.slice(0,4)-4;
 const PEAK_CUTOFF=(()=>{const y=+RAW.through.slice(0,4)-1;return `${y}${RAW.through.slice(4)}`})();
 const DATA=RAW.cx.map((c,i)=>{
   const keys=Object.keys(c.s).sort();
@@ -265,7 +267,8 @@ function applyPeriod(){
     const b=d.by[PERIOD];
     d.has=b.p!=null;d.price=b.p;d.jeonse=b.j;d.cnt=b.c;
     if(!d.has)return;
-    d.recovery=d.peak?d.price/d.peak:null;   // 1 넘으면 전고점 돌파
+    d.isNew=d.built>=NEW_BUILT_FROM;
+    d.recovery=(d.peak&&!d.isNew)?d.price/d.peak:null;   // 1 넘으면 전고점 돌파 (신축은 비교하지 않음)
     d.ratio=d.jeonse?d.jeonse/d.price:null;d.ppy=d.price/PYEONG;
   });
   // 평당가 비교는 같은 권역(동탄1·동탄2·영통권·기흥·수지) 중위값 기준
@@ -277,7 +280,7 @@ applyPeriod();
 
 // ---------- 점수 ----------
 const FACTORS=[
-  {key:"rec",label:"전고점 대비 하락폭",hint:"역대 최고가보다 많이 빠져 있을수록 점수↑ (돌파하면 0점)",def:35,f:d=>d.recovery==null?0.5:clamp((1-d.recovery)/0.25),show:d=>{const v=vsPeak(d);return v==null?"전고점 없음":(v>=0?`돌파 +${v}%`:`${v}%`)}},
+  {key:"rec",label:"전고점 대비 하락폭",hint:"역대 최고가보다 많이 빠져 있을수록 점수↑ (돌파하면 0점)",def:35,f:d=>d.recovery==null?0.5:clamp((1-d.recovery)/0.25),show:d=>{const v=vsPeak(d);return d.isNew?"신축 제외":v==null?"전고점 없음":(v>=0?`돌파 +${v}%`:`${v}%`)}},
   {key:"dist",label:"권역 평균 대비 평당가",hint:"같은 권역 중위 평당가보다 쌀수록 점수↑",def:25,f:d=>clamp((0.5-d.vsDist)/1.0),show:d=>`${d.vsDist>=0?"+":""}${(d.vsDist*100).toFixed(0)}%`},
   {key:"jr",label:"전세가율",hint:"매매가를 받쳐주는 전세가 높을수록 점수↑",def:20,f:d=>d.ratio==null?0.5:clamp((d.ratio-0.35)/0.3),show:d=>d.ratio==null?"자료 없음":`${(d.ratio*100).toFixed(0)}%`},
   {key:"new",label:"신축도",hint:"같은 값이면 새 아파트일수록 점수↑",def:20,f:d=>clamp((d.built-2005)/18),show:d=>`${d.built}년`},
@@ -289,7 +292,7 @@ const grade=s=>s>=55?["저평가","p-good"]:s>=40?["적정","p-mid"]:["고평가
 
 // ---------- 전고점 대비 표시 ----------
 const vsPeak=d=>d.recovery==null?null:Math.round((d.recovery-1)*100);
-const peakTag=d=>{const v=vsPeak(d);if(v==null)return `<span class="pk none">전고점 없음</span>`;
+const peakTag=d=>{const v=vsPeak(d);if(d.isNew)return `<span class="pk none">신축 · 전고점 비교 제외</span>`;if(v==null)return `<span class="pk none">전고점 없음</span>`;
   return v>=0?`<span class="pk up">전고점 돌파 +${v}%</span>`:`<span class="pk down">전고점 대비 ${v}%</span>`};
 
 // ---------- 포맷 ----------
@@ -383,7 +386,7 @@ function renderStats(){
   $("stats").innerHTML=[
     [REGION==="all"?"전체 중위 평당가":`${GROUPS.find(g=>g.k===REGION).l} 중위 평당가`,`${Math.round(REGION==="all"?DIST_PPY:(GRP_PPY[REGION]||0)).toLocaleString()}<small> 만원/전용3.3㎡</small>`],
     ["중위 전세가율",`${(median(withR.map(d=>d.ratio))*100).toFixed(1)}<small>%</small>`],
-    ["전고점 돌파 단지",(()=>{const w=live.filter(d=>d.recovery!=null),u=w.filter(d=>d.recovery>=1).length;return `${u}<small> / ${w.length}곳 (${w.length?Math.round(u/w.length*100):0}%)</small>`})()],
+    ["전고점 돌파 (신축 제외)",(()=>{const w=live.filter(d=>d.recovery!=null),u=w.filter(d=>d.recovery>=1).length;return `${u}<small> / ${w.length}곳 (${w.length?Math.round(u/w.length*100):0}%)</small>`})()],
     [`최근 ${PERIOD}개월 84㎡ 거래`,`${vol.toLocaleString()}<small> 건 · ${live.length}개 단지</small>`],
   ].map(([k,v])=>`<div class="stat"><div class="k">${k}</div><div class="v num">${v}</div></div>`).join("");
 }
